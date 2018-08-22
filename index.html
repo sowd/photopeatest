@@ -7,13 +7,14 @@ console.log(location);
 };
 
 function ck(){
+	const prefix = location.protocol+'//'+location.hostname+location.pathname;
 	window.open('https://www.photopea.com/#'
 		+encodeURI(JSON.stringify({
 			files: [
-				'http://lab.lifedesign.tech/test-owd/img_lights.jpg'
+				prefix+'img_lights.jpg'
 			],
 			server:{
-				url:'http://lab.lifedesign.tech/tmp-owd/get.html'
+				url:prefix+'get.html'
 				,formats:['psd:true','png','jpg:0.5']
 			}
 		}))
