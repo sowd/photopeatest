@@ -1,0 +1,27 @@
+<html>
+<head>
+<script>
+onload=function(){
+console.log(location);
+	const myhost = location.host+location.pathname;
+};
+
+function ck(){
+	window.open('https://www.photopea.com/#'
+		+encodeURI(JSON.stringify({
+			files: [
+				'http://lab.lifedesign.tech/test-owd/img_lights.jpg'
+			],
+			server:{
+				url:'http://lab.lifedesign.tech/tmp-owd/get.html'
+				,formats:['psd:true','png','jpg:0.5']
+			}
+		}))
+	,'TGT');
+}
+</script>
+</head>
+<body>
+<input type='button' onclick='ck()' value='Open'></input>
+</body>
+</html>
